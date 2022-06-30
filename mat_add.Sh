@@ -1,8 +1,8 @@
-#Addition of two matrices
+
 #!/bin/bash
 m=3
 n=3
-declare -A X   #The declare is a builtin command of the bash shell. It is used to declare shell variables and functions, set their attributes and display their values
+declare -A X   
 declare -A Y
 declare -A Z
 echo "Enter the elements of the first 3*3 matrix"
@@ -30,7 +30,7 @@ for((i=0;i<3;i++))
 do
     for((j=0;j<3;j++))
     do
-        echo -ne " ${X[$i,$j]}" # -ne or -en will not append a new line in echo
+        echo -ne " ${X[$i,$j]}" 
     done
     echo
     echo
