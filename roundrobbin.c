@@ -1,4 +1,4 @@
-//round robin
+
 
 #include <stdio.h>
 #include<stdlib.h>
@@ -21,7 +21,6 @@ void waittime(pro p[], int n)
     for (int i = 0; i < n; i++)
     {
         p[i].wt = p[i].tt - temp[i];
-        // p[i].rt = p[i].wt;
     }
 }
 
