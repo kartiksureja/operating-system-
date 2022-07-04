@@ -1,4 +1,4 @@
-//Simulate "cat >> f1 f2"
+//program for copying cotext from one file to another ,operating system call replica 
 #include<stdio.h>
 #include<stdlib.h>
 void main(int argc, char *argv[])
