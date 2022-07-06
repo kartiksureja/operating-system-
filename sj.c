@@ -1,7 +1,4 @@
-
-// SJF
-
-#include <stdio.h>
+include <stdio.h>
 
 struct process
 {
@@ -9,7 +6,6 @@ struct process
 };
 struct process a[10];
 
-// function for swapping
 void swap(int *b, int *c)
 {
     int tem;
@@ -18,7 +14,6 @@ void swap(int *b, int *c)
     *b = tem;
 }
 
-// Driver function
 int main()
 {
     int n, check_ar = 0;
@@ -40,8 +35,7 @@ int main()
         if (check_ar != a[i].AT)
             check_ar = 1;
     }
-    // if process are arrived at the different time
-    // then sort the process on the basis of AT
+
     if (check_ar != 0)
     {
         for (int i = 0; i < n; i++)
@@ -58,8 +52,7 @@ int main()
         }
     }
 
-    // logic of SJF non preemptive algo
-    // if all the process are arrived at different time
+
     if (check_ar != 0)
     {
         a[0].WT = a[0].AT;
@@ -91,8 +84,6 @@ int main()
             Total_TAT = Total_TAT + a[i].TAT;
         }
     }
-
-    // if all the process are arrived at same time
     else
     {
         for (int i = 0; i < n; i++)
@@ -109,12 +100,7 @@ int main()
                 }
             }
             a[i].WT = Cmp_time - a[i].AT;
-
-            // completion time of the process
             Cmp_time = Cmp_time + a[i].BT;
-
-            // Turn Around Time of the process
-            // compl-Arrival
             a[i].TAT = Cmp_time - a[i].AT;
             Total_WT = Total_WT + a[i].WT;
             Total_TAT = Total_TAT + a[i].TAT;
